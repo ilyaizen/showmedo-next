@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "ShowMeDo",
   description:
-    "A to-do list that suggests my next task, prioritizing what matters most",
+    "A to-do list that suggests your next task, prioritizing what matters most",
 };
 
 export default function RootLayout({
