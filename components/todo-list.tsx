@@ -196,9 +196,6 @@ export function TodoList() {
     <div className="max-w-3xl mx-auto p-4 space-y-4">
       {isLoaded ? (
         <>
-          <h1 className="text-2xl font-bold text-center mb-6">ShowMeDo</h1>
-
-          {/* Moved Recommendation section to the top */}
           <div className="flex flex-col items-center space-y-2 mb-6">
             <Button
               onClick={retryCount > 0 ? handleShowMeDo : resetRetryCount}
@@ -207,8 +204,10 @@ export function TodoList() {
               {retryCount === 3
                 ? "ShowMeDo"
                 : retryCount > 0
-                  ? `Retry... (${retryCount} ${retryCount === 1 ? "retry" : "retries"} left)`
-                  : "Reset Retries"}
+                ? `Retry... (${retryCount} ${
+                    retryCount === 1 ? "retry" : "retries"
+                  } left)`
+                : "Reset Retries"}
             </Button>
             {showRecommendation && (
               <Card className="w-full max-w-xs animate-recommendation-pop-in shadow-md">
@@ -283,7 +282,9 @@ export function TodoList() {
                         {/* Todo task text */}
                         <label
                           htmlFor={`todo-${todo.id}`}
-                          className={`font-medium ${todo.completed ? "line-through" : ""}`}
+                          className={`font-medium ${
+                            todo.completed ? "line-through" : ""
+                          }`}
                         >
                           {todo.task}
                         </label>
