@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   title: "ShowMeDo",
   description:
     "A to-do list that suggests your next task, prioritizing what matters most",
+  keywords: ["to-do", "task", "prioritize", "productivity"],
+  openGraph: {
+    title: "ShowMeDo",
+    description:
+      "A to-do list that suggests your next task, prioritizing what matters most",
+    images: ["/og-image.png"],
+    type: "website",
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
